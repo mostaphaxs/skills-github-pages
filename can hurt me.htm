@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psychology of Money - Book Details</title>
+    <style>
+        /* 🌟 Bannière avec effet de parallaxe */
+        .banner {
+            background: url('61pDNU9qEGL._AC_UF1000,1000_QL80_.jpg') center/cover fixed no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+        }
+        
+        /* 🌟 Conteneur du livre */
+        .book-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+        
+        .book-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1000px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        /* 🌟 Animation d’apparition */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 🌟 Image du livre */
+        .book-image {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 🌟 Infos du livre */
+        .book-info h2 {
+            color: #2d3436;
+        }
+        
+        .author {
+            color: #636e72;
+            font-size: 18px;
+        }
+        
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00b894;
+            margin: 15px 0;
+        }
+        
+        /* 🌟 Liste des points forts */
+        .highlights {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .highlights li {
+            font-size: 16px;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+        
+        /* 🌟 Boutons */
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn, .btn-secondary {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* 🌟 Navbar */
+        nav a {
+            font-family: 'Orbitron', sans-serif; /* Police futuriste */
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(31, 8, 8);
+            text-decoration: none;
+            padding: 12px 24px;
+            position: relative;
+            overflow: hidden;
+            margin: 40%;
+            box-shadow: 10px 8px 15px rgba(116, 185, 255, 0.7);
+            align-items: center;
+            transition: 0.8s;
+        }
+
+        nav a:hover {
+            color: #74b9ff;
+            transform: scale(1.2);
+        }
+
+        .btn {
+            background: #0984e3;
+            color: white;
+        }
+        
+        .btn:hover {
+            background: #0078d4;
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #e84118;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.htm" class="nav-home">🏠 Home</a>
+    </nav>
+    <br><br>
+
+    <!-- Bannière -->
+    <header class="banner">
+        <h1>The Psychology of Money</h1>
+        <p>By Morgan Housel</p>
+    </header>
+
+    <!-- Contenu du livre -->
+    <section class="book-details">
+        <div class="book-container">
+            <img src="61pDNU9qEGL._AC_UF1000,1000_QL80_.jpg" class="book-image" alt="The Psychology of Money">
+            <div class="book-info">
+                <h2>The Psychology of Money</h2>
+                <p class="author">By <strong>Morgan Housel</strong></p>
+                <p class="price">$18.50</p>
+                <p class="description">
+                    "The Psychology of Money" teaches us how emotions and biases shape our financial decisions.
+                    Morgan Housel explores timeless financial lessons that emphasize mindset over technical knowledge.
+                </p>
+                <ul class="highlights">
+                    <li>💰 Learn why financial success is more about behavior than intelligence</li>
+                    <li>📊 Understand how emotions drive financial decisions</li>
+                    <li>🧠 Develop a long-term perspective on money and wealth</li>
+                </ul>
+                <div class="buttons">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn-secondary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2023 Premium Bookstore. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

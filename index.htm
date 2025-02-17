@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Bookstore</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+            min-height: 100vh;
+            background: 
+                linear-gradient(45deg, 
+                    #000000 0%, 
+                    #000428 25%, 
+                    #004e92 50%,
+                    #000428 75%,
+                    #000000 100%);
+            background-size: 400% 400%;
+            animation: space-flow 20s linear infinite;
+            position: relative;
+        
+        }
+
+        @keyframes space-flow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        
+
+        @keyframes star-twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        .animehr{
+            border: none;
+            height: 4px;
+            width: 80%;
+            margin: 40px auto;
+            position: relative;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+            animation: hr-animation 3s ease infinite;
+        }
+
+        @keyframes hr-animated {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes hr-animation {
+            0% {
+                transform: scaleX(0.5);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scaleX(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scaleX(0.5);
+                opacity: 0.7;
+            }
+        }
+
+
+     
+            
+        /* 🌟 Importation d'une police moderne et unique */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* 🌟 Navbar améliorée */
+nav {
+    background: rgba(45, 52, 54, 0.9); /* Fond semi-transparent */
+    padding: 16px 40px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+    backdrop-filter: blur(10px); /* Effet glassmorphism */
+}
+
+/* 🌟 Style du bouton Home */
+nav a {
+    font-family: 'Orbitron', sans-serif; /* Police futuriste */
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 🌟 Ajout d'une icône pour Home */
+
+
+
+
+
+nav a:hover {
+    color: #74b9ff;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(116, 185, 255, 0.7);
+}
+
+  
+        
+
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 19px;
+            margin: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            width: 300px;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: 280px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .img-fluid {
+            transform: scale(1.02);
+        }
+
+        h3 {
+            color: #2d3436;
+            font-size: 17.6px;
+            margin-bottom: 12px;
+            min-height: 60px;
+        }
+
+        .price {
+            color: #00b894;
+            font-size: 20.8px;
+            font-weight: bold;
+            margin: 16px 0;
+        }
+       
+        .footer {
+            background: #2d3436;
+            color: white;
+            padding: 64px 32px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            display: flex;
+            gap: 150px;
+        }
+
+        .footer-section h4 {
+            color: #74b9ff;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+         
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12.8px;
+        }
+
+        .footer-links a {
+            color: #dfe6e9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #74b9ff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 48px;
+            margin-top: 48px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    
+        .btn {
+            background: #0984e3;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0078d4;
+            transform: scale(1.02);
+        }
+        .btn-secondary {
+            background: #ff6b6b; 
+            color: white;
+            padding: 12.8px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            
+            transition: all 0.3s ease;
+            text-decoration: none;
+            
+        }
+
+        .btn-secondary:hover {
+            background: #e84118; 
+            transform: scale(1.02);
+        }
+       
+
+        /* Contact Section */
+        .contact-card {
+            margin: 100px 100px;
+            width: 1000px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 12.8px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .intro-section {
+            background: #f8f9fa;
+            padding: 64px 32px;
+            margin-bottom: 48px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .intro-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            height: 800px;
+            opacity: 4;
+        }
+
+        .intro-section h1 {
+            color: #2d3436;
+            font-size: 40px;
+            margin-bottom: 32px;
+            font-weight: 600;
+            
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 48px;
+            color: #666;
+            line-height: 1.8;
+            font-size: 17.6px;
+        }
+
+        .intro-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .highlight-item {
+            background: white;
+            padding: 32px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .highlight-item h3 {
+            color: #2d3436;
+            margin-bottom: 12.8px;
+        }
+
+        .highlight-item p {
+            color: #666;
+            font-size: 15.2px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a onclick="window.location.href='#section1'" href="#home">Home</a>
+        <a onclick="window.location.href='#section2'" href="#products">Books</a>
+        <a onclick="window.location.href='#section3'" href="#about">About</a>
+        <a onclick="window.location.href='#section4'" href="#contact">Contact</a>
+        
+    </nav>
+    <section class="intro-section">
+        
+        <div id="section1" class="intro-content">
+            <h1>Exploring the Human Mind</h1>
+            <div class="intro-text">
+                <p>Welcome to PsychBooks - your gateway to understanding human behavior, cognition, and emotional health. 
+                We curate the most influential psychology books from renowned experts and researchers.</p>
+                
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🧠</div>
+                        <h3>Cognitive Science</h3>
+                        <p>Discover how the mind processes information</p>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-icon">💡</div>
+                        <h3>Behavioral Psychology</h3>
+                        <p>Understand the mechanics of human actions</p>
+                    </div>
+                    
+                    <div class="highlight-item" style="width: 790px;">
+                        <div class="highlight-icon">❤️</div>
+                        <h3>Emotional Intelligence</h3>
+                        <p>Master relationship-building skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    
+    </section>
+    <section id="section2">
+                <div style="display: flex; gap: 10px;" ><div class="card">
+                            <img src="Deep_Work_c1.jpg" class="img-fluid" alt="Deep Work">
+                            <h3>Deep Work: Rules for Focused Success</h3>
+                            <div class="price">$27.99</div>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="deep.htm" class="btn-secondary">More Info</a>
+                            </div>
+                            
+                        </div>
+
+                        <div class="card">
+                            <img src="9781529077155.jpg" class="img-fluid" alt="Atomic Habits">
+                            <h3>Atomic Habits: An Easy & Proven Way</h3>
+                            <div class="price">$29.95</div>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="Atomic.htm" class="btn-secondary">More Info</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="61pDNU9qEGL._AC_UF1000,1000_QL80_.jpg" class="img-fluid" alt="Psychology of Money">
+                            <h3>The Psychology of Money</h3>
+                            <div class="price">$18.50</div>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="can hurt me.htm" class="btn-secondary">More Info</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="asd.jpg" class="img-fluid" alt="The Alchemist">
+                            <h3>The Alchemist: A Classic Novel</h3>
+                            <div class="price">$15.99</div>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="Power.htm" class="btn-secondary">More Info</a>
+                            </div>
+                        </div>
+                </div>
+            </section>
+                <!-- All Your Original Images with Updated Names/Prices -->
+            <hr class="animehr" >
+            <div style="display: flex; gap: 10px;" >
+                <div class="card">
+                    <img src="images.jpg" class="img-fluid" alt="Lean Startup">
+                    <h3>The Lean Startup: Modern Business Strategies</h3>
+                    <div class="price">$24.99</div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn">Add to Cart</button>
+                        <a href="startup.htm" class="btn-secondary">More Info</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="asdasd.jpg" class="img-fluid" alt="Sapiens">
+                    <h3>Sapiens: Brief History of Humankind</h3>
+                    <div class="price">$22.49</div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn">Add to Cart</button>
+                        <a href="History.htm" class="btn-secondary">More Info</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="51XVTl7HZTL._SL500_.jpg" class="img-fluid" alt="Start With Why">
+                    <h3>Start With Why: Great Leaders Inspire Action</h3>
+                    <div class="price">$19.99</div>
+                    <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="Psycho.htm" class="btn-secondary">More Info</a>
+                            </div>
+                </div>
+
+                <div class="card">
+                    <img src="s.jpg" class="img-fluid" alt="7 Habits">
+                    <h3>The 7 Habits of Highly Effective People</h3>
+                    <div class="price">$25.75</div>
+                    <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="Habit.htm" class="btn-secondary">More Info</a>
+                            </div>
+                </div>
+            </div>    
+            <hr class="animehr" >
+            <div style="display: flex; gap: 10px;" >
+                <div class="card">
+                    <img src="61cUace9mEL._AC_UF1000,1000_QL80_.jpg" class="img-fluid" alt="Thinking Fast and Slow">
+                    <h3>Thinking, Fast and Slow</h3>
+                    <div class="price">$20.99</div>
+                    <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="" class="btn-secondary">More Info</a>
+                            </div>
+                </div>
+
+                <div class="card">
+                    <img src="90726550-8664-4042-9453-494958b45ddf-1735124889214-jpeg-500x500.webp" class="img-fluid" alt="Business Adventures">
+                    <h3>Business Adventures: Wall Street Classics</h3>
+                    <div class="price">$28.50</div>
+                    <div style="display: flex; gap: 10px;">
+                                <button class="btn">Add to Cart</button>
+                                <a href="" class="btn-secondary">More Info</a>
+                            </div>
+                </div>
+
+                <div class="card">
+                    <img src="the-venture-mindset-original-imagyfx9fk3kd5jz.webp" class="img-fluid" alt="Venture Mindset">
+                    <h3>The Venture Mindset: Innovation Strategies</h3>
+                    <div class="price">$26.99</div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn">Add to Cart</button>
+                        <a href="" class="btn-secondary">More Info</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="f5845110009ee5a69414d013d50a170e.jpg_720x720q80.jpg" class="img-fluid" alt="Power of Now">
+                    <h3>The Power of Now: Spiritual Enlightenment</h3>
+                    <div class="price">$17.99</div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn">Add to Cart</button>
+                        <a href="" class="btn-secondary">More Info</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <br>
+    
+    <section id="section3">
+        <div class="contact-card">
+            <h2 style="text-align: center; color: #2d3436; margin-bottom: 30px;">About Our Bookstore</h2>
+            <p style="text-align: center; color: #666;">
+                Just Wait Every Week . We will renew our Store So Stay Arround !!!!! 
+                Check Our email page <a href="#">Book@gmail.com</a>
+            </p>
+            <br>
+            <br>
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email Address">
+                <button class="btn" type="submit" style="margin-top: 1rem;">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <section id="section4">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Your premier destination for knowledge and personal growth since 2015.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#bestsellers">Bestsellers</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li>📞 +1 (234) 567-890</li>
+                        <li>📧 info@bookstore.com</li>
+                        <li>📍 123 Book Street, NY</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 Premium Bookstore. All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+</body>
+</html>
